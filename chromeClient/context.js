@@ -1,4 +1,4 @@
-var ws = new WebSocket("ws://127.0.0.1:2011");
+var ws = new WebSocket("ws://10.11.21.1:2011");
 ws.onopen = function(){
 	ws.send("Hello Server!");
 }
