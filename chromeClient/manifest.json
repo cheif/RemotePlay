@@ -4,7 +4,7 @@
 	"description": "Play online media on a remote server",
 	"browser_action": {
 		"default_icon": "icon.png",
-		"popup": "icon.png"
+		"default_popup": "popup.html"
 	},
 	"permissions": [
 		"contextMenus"

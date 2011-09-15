@@ -1,0 +1,34 @@
+<script type="text/javascript">
+function save_options(){
+	var name = document.getElementById("name").value;
+	var ip = document.getElementById("ip").value;
+	var servers = localStorage['servers'];
+	servers.push = {'name': name, 'ip': ip};
+	localStorage['servers'] = servers;
+	alert(servers);
+}
+
+function loadservers(){
+
+</script>
+<table id="servers">
+	<tr>
+		<th>Server:</th>
+		<th>Status:</th>
+	</tr>
+	<tbody>
+	</tbody>
+	<tfoot>
+		<tr>
+			<td>Add server:</td>
+		</tr>
+		<tr>
+			<td><input id="name"></td>
+			<td><input id="ip"></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><button onclick="save_options()">Submit</tr></td>
+		</tr>
+</table>
+

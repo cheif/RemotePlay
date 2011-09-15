@@ -1,4 +1,4 @@
-var ws = new WebSocket("ws://10.11.21.1:2011");
+var ws = new WebSocket("ws://0.0.0.0:2011");
 ws.onopen = function(){
 	ws.send("Hello Server!");
 }
@@ -17,5 +17,10 @@ function ClickHandler(info, tab){
 	ws.send(url);
 }
 
+var validhosts = [
+	"http://soundcloud.com/*",
+	"http://www.youtube.com/watch*"
+	];
 
-chrome.contextMenus.create({'title': "RemotePlay", 'contexts': ["link"], 'onclick': ClickHandler});
+chrome.contextMenus.create({'title': "RemotePlay", 'contexts': ["link"], 'onclick': ClickHandler, targetUrlPatterns: validhosts});
+
